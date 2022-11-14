@@ -1,10 +1,10 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './client/src/index.html',
   filename: './index.html',
-})
+});
 module.exports = {
   entry: './client/src/index.js',
   output: {
@@ -23,4 +23,4 @@ module.exports = {
       },
     ],
   },
-}
+};

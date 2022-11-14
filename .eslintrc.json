@@ -3,7 +3,7 @@
   "plugins": ["prettier"],
   "ignorePatterns": ["client/dist"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "semi": true }],
     "no-unused-vars": "warn",
     "no-console": "off",
     "func-names": "off",
