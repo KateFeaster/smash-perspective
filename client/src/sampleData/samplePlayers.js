@@ -4,13 +4,13 @@ module.exports = {
       entrants: {
         nodes: [
           {
+            id: 10895575,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Shuton',
                     prefix: 'SST',
-                    id: 226829,
                   },
                   images: [
                     {
@@ -22,13 +22,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895576,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Kameme',
                     prefix: 'RayRoadGaming',
-                    id: 1408155,
                   },
                   images: [],
                 },
@@ -36,13 +36,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895577,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Gackt',
                     prefix: 'ZETA',
-                    id: 484575,
                   },
                   images: [
                     {
@@ -54,13 +54,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895582,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Tweek',
                     prefix: 'TSM FTX',
-                    id: 15768,
                   },
                   images: [
                     {
@@ -72,13 +72,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895585,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'KEN',
                     prefix: 'SBI',
-                    id: 212701,
                   },
                   images: [
                     {
@@ -90,13 +90,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895588,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Yayzors',
                     prefix: '',
-                    id: 285091,
                   },
                   images: [],
                 },
@@ -104,13 +104,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895589,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'FireThePyro',
                     prefix: '',
-                    id: 390882,
                   },
                   images: [
                     {
@@ -122,13 +122,13 @@ module.exports = {
             ],
           },
           {
+            id: 10895594,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Silvi',
                     prefix: 'DE',
-                    id: 489226,
                   },
                   images: [
                     {
@@ -140,13 +140,13 @@ module.exports = {
             ],
           },
           {
+            id: 10899448,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Drean',
                     prefix: '',
-                    id: 1062050,
                   },
                   images: [
                     {
@@ -158,13 +158,13 @@ module.exports = {
             ],
           },
           {
+            id: 10899455,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Avenue',
                     prefix: 'Panda',
-                    id: 566866,
                   },
                   images: [
                     {
@@ -176,13 +176,13 @@ module.exports = {
             ],
           },
           {
+            id: 10899461,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Lyra',
                     prefix: '',
-                    id: 49585,
                   },
                   images: [
                     {
@@ -194,13 +194,13 @@ module.exports = {
             ],
           },
           {
+            id: 10899464,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Ice Goat',
                     prefix: 'WGAFGC',
-                    id: 63818,
                   },
                   images: [
                     {
@@ -212,13 +212,13 @@ module.exports = {
             ],
           },
           {
+            id: 10899474,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Bleggaman',
                     prefix: 'Bleg',
-                    id: 222959,
                   },
                   images: [
                     {
@@ -230,13 +230,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901213,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'pekwek',
                     prefix: '',
-                    id: 1738602,
                   },
                   images: [
                     {
@@ -248,13 +248,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901215,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Hidro',
                     prefix: '',
-                    id: 1064010,
                   },
                   images: [
                     {
@@ -266,13 +266,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901216,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Mystery Sol',
                     prefix: '',
-                    id: 705840,
                   },
                   images: [
                     {
@@ -284,13 +284,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901224,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Sensory',
                     prefix: '',
-                    id: 1573588,
                   },
                   images: [
                     {
@@ -302,13 +302,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901229,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Game 3',
                     prefix: null,
-                    id: 2031015,
                   },
                   images: [
                     {
@@ -320,13 +320,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901233,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Neos',
                     prefix: 'CWA',
-                    id: 156283,
                   },
                   images: [
                     {
@@ -338,13 +338,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901236,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Dii',
                     prefix: 'RLz | MSFT',
-                    id: 1399572,
                   },
                   images: [
                     {
@@ -356,13 +356,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901238,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'thinkin mikyu',
                     prefix: '',
-                    id: 486903,
                   },
                   images: [
                     {
@@ -374,13 +374,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901241,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'kudaltrix',
                     prefix: null,
-                    id: 1014668,
                   },
                   images: [],
                 },
@@ -388,13 +388,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901244,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'Arpeggio',
                     prefix: 'BHAM!',
-                    id: 540874,
                   },
                   images: [
                     {
@@ -406,13 +406,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901248,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'methaneBrain',
                     prefix: null,
-                    id: 2069286,
                   },
                   images: [
                     {
@@ -424,13 +424,13 @@ module.exports = {
             ],
           },
           {
+            id: 10901250,
             participants: [
               {
                 user: {
                   player: {
                     gamerTag: 'McCoy',
                     prefix: null,
-                    id: 1740798,
                   },
                   images: [
                     {
