@@ -1,9 +1,9 @@
 class Player {
-  constructor(id, gamerTag, prefix, profileImage) {
-    this.id = id;
-    this.gamerTag = gamerTag;
-    this.prefix = prefix;
-    this.profileImage = profileImage;
+  constructor(userInfo) {
+    this.id = userInfo.id;
+    this.gamerTag = userInfo.gamerTag;
+    this.prefix = userInfo.prefix;
+    this.profileImage = userInfo.profileImage;
 
     this.matches = [];
   }
