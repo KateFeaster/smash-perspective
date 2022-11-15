@@ -4,12 +4,13 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import Player from '../Player';
 
 function PlayerListEntry({ player }) {
   return (
     <ListItemButton>
       <ListItemAvatar>
-        <Avatar alt={`${player.gamerTag}'s Avatar`} src={player.image} />{' '}
+        <Avatar alt={`${player.gamerTag}'s Avatar`} src={player.profileImage} />{' '}
       </ListItemAvatar>
       <ListItemText
         primary={`${player.prefix ? `${player.prefix} | ` : ''}${
@@ -21,12 +22,7 @@ function PlayerListEntry({ player }) {
 }
 
 PlayerListEntry.propTypes = {
-  player: PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    gamerTag: PropTypes.string,
-    image: PropTypes.string,
-    prefix: PropTypes.string,
-  }).isRequired,
+  player: PropTypes.instanceOf(Player).isRequired,
 };
 
 export default PlayerListEntry;
