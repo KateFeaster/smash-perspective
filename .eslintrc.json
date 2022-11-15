@@ -24,6 +24,12 @@
         "version": ">=13.0.0",
         "ignores": ["modules"]
       }
+    ],
+    "node/no-missing-import": [
+      "error",
+      {
+        "tryExtensions": [".js", ".json", ".node", ".jsx"]
+      }
     ]
   },
   "parserOptions": { "emcaVersion": "latest", "sourceType": "module" },
