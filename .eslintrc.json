@@ -3,8 +3,11 @@
     "airbnb",
     "prettier",
     "plugin:node/recommended",
-    "plugin:react/recommend"
+    "plugin:react/recommended"
   ],
+  "env": {
+    "browser": true
+  },
   "plugins": ["prettier"],
   "ignorePatterns": ["client/dist"],
   "rules": {
@@ -14,8 +17,16 @@
     "func-names": "off",
     "no-process-exit": "off",
     "object-shorthand": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "version": ">=13.0.0",
+        "ignores": ["modules"]
+      }
+    ]
   },
+  "parserOptions": { "emcaVersion": "latest", "sourceType": "module" },
   "overrides": [
     {
       "files": ["webpack.config.js", "test/**/*.js"],
