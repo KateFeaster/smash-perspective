@@ -4,6 +4,8 @@ class Player {
     this.gamerTag = userInfo.gamerTag;
     this.prefix = userInfo.prefix;
     this.profileImage = userInfo.profileImage;
+    this.seed = userInfo.seed;
+    this.placement = userInfo.placement;
 
     this.matches = [];
   }

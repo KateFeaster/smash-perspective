@@ -5,6 +5,7 @@ module.exports = {
         nodes: [
           {
             id: 10895575,
+            initialSeedNum: 1,
             participants: [
               {
                 user: {
@@ -20,9 +21,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 3,
+            },
           },
           {
             id: 10895576,
+            initialSeedNum: 7,
             participants: [
               {
                 user: {
@@ -34,9 +39,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 5,
+            },
           },
           {
             id: 10895577,
+            initialSeedNum: 14,
             participants: [
               {
                 user: {
@@ -52,9 +61,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 25,
+            },
           },
           {
             id: 10895582,
+            initialSeedNum: 4,
             participants: [
               {
                 user: {
@@ -70,9 +83,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 1,
+            },
           },
           {
             id: 10895585,
+            initialSeedNum: 5,
             participants: [
               {
                 user: {
@@ -88,9 +105,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 4,
+            },
           },
           {
             id: 10895588,
+            initialSeedNum: 204,
             participants: [
               {
                 user: {
@@ -102,9 +123,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 129,
+            },
           },
           {
             id: 10895589,
+            initialSeedNum: 47,
             participants: [
               {
                 user: {
@@ -120,9 +145,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 65,
+            },
           },
           {
             id: 10895594,
+            initialSeedNum: 274,
             participants: [
               {
                 user: {
@@ -138,9 +167,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 385,
+            },
           },
           {
             id: 10899448,
+            initialSeedNum: 591,
             participants: [
               {
                 user: {
@@ -156,9 +189,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 193,
+            },
           },
           {
             id: 10899455,
+            initialSeedNum: 157,
             participants: [
               {
                 user: {
@@ -174,9 +211,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 129,
+            },
           },
           {
             id: 10899461,
+            initialSeedNum: 277,
             participants: [
               {
                 user: {
@@ -192,9 +233,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 257,
+            },
           },
           {
             id: 10899464,
+            initialSeedNum: 293,
             participants: [
               {
                 user: {
@@ -210,9 +255,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 385,
+            },
           },
           {
             id: 10899474,
+            initialSeedNum: 178,
             participants: [
               {
                 user: {
@@ -228,9 +277,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 193,
+            },
           },
           {
             id: 10901213,
+            initialSeedNum: 215,
             participants: [
               {
                 user: {
@@ -246,9 +299,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 193,
+            },
           },
           {
             id: 10901215,
+            initialSeedNum: 298,
             participants: [
               {
                 user: {
@@ -264,9 +321,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 385,
+            },
           },
           {
             id: 10901216,
+            initialSeedNum: 71,
             participants: [
               {
                 user: {
@@ -282,9 +343,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 17,
+            },
           },
           {
             id: 10901224,
+            initialSeedNum: 405,
             participants: [
               {
                 user: {
@@ -300,9 +365,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 257,
+            },
           },
           {
             id: 10901229,
+            initialSeedNum: 332,
             participants: [
               {
                 user: {
@@ -318,9 +387,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 193,
+            },
           },
           {
             id: 10901233,
+            initialSeedNum: 319,
             participants: [
               {
                 user: {
@@ -336,9 +409,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 385,
+            },
           },
           {
             id: 10901236,
+            initialSeedNum: 193,
             participants: [
               {
                 user: {
@@ -354,9 +431,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 257,
+            },
           },
           {
             id: 10901238,
+            initialSeedNum: 227,
             participants: [
               {
                 user: {
@@ -372,9 +453,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 193,
+            },
           },
           {
             id: 10901241,
+            initialSeedNum: 314,
             participants: [
               {
                 user: {
@@ -386,9 +471,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 129,
+            },
           },
           {
             id: 10901244,
+            initialSeedNum: 109,
             participants: [
               {
                 user: {
@@ -404,9 +493,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 129,
+            },
           },
           {
             id: 10901248,
+            initialSeedNum: 249,
             participants: [
               {
                 user: {
@@ -422,9 +515,13 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 257,
+            },
           },
           {
             id: 10901250,
+            initialSeedNum: 218,
             participants: [
               {
                 user: {
@@ -440,6 +537,9 @@ module.exports = {
                 },
               },
             ],
+            standing: {
+              placement: 385,
+            },
           },
         ],
       },
@@ -456,7 +556,7 @@ module.exports = {
         },
       ],
     },
-    queryComplexity: 76,
+    queryComplexity: 151,
   },
   actionRecords: [],
 };
