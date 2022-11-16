@@ -103,7 +103,7 @@ function PlayerDetails({ player, entrantCount, players, setPlayerMatches }) {
           </Box>
         </Grid>
       </Grid>
-      <Stack spacing={2}>
+      <Stack spacing={2} sx={{ width: '50%', margin: '0 auto' }}>
         {player.matches.map((match) => (
           <MatchCard match={match} players={players} key={match.id} />
         ))}
