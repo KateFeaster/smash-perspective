@@ -39,7 +39,7 @@ players[0].matches = matches;
 
 function App() {
   return (
-    <Grid container>
+    <Grid container spacing={2}>
       <Grid xs={3}>
         <PlayerList players={players} />
       </Grid>

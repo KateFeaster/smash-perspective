@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Match from '../Match';
@@ -9,13 +9,20 @@ import PlayerCard from './PlayerCard';
 
 function MatchCard({ match, players }) {
   return (
-    <Paper>
-      <Grid container xs={7}>
+    <Paper sx={{ p: 1 }} variant="outlined">
+      <Grid container>
         <Grid xs={5}>
           <Typography>{match.fullRoundText}</Typography>
           <Typography>{match.displayScore}</Typography>
         </Grid>
-        <Grid xs={2}>
+        <Grid
+          xs={2}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
           <Typography>VS</Typography>
         </Grid>
         <Grid xs={5}>

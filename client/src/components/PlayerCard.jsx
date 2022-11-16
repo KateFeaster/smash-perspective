@@ -8,7 +8,7 @@ import Player from '../Player';
 
 function PlayerCard({ player }) {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Box sx={{ display: 'flex', gap: 1 }}>
       <Avatar alt={`${player.gamerTag}'s Avatar`} src={player.profileImage} />
       <Typography>{`${player.prefix ? `${player.prefix} | ` : ''}${
         player.gamerTag

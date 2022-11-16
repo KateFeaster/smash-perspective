@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
+import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
 import Player from '../Player';
 import MatchCard from './MatchCard';
@@ -32,10 +33,12 @@ function PlayerDetails({ player, entrantCount, players }) {
         <p>Seed</p>
         <p>{player.seed}</p>
       </Grid>
-      <Grid container xs={12}>
-        {player.matches.map((match) => (
-          <MatchCard match={match} players={players} key={match.id} />
-        ))}
+      <Grid xs={12}>
+        <Stack spacing={2}>
+          {player.matches.map((match) => (
+            <MatchCard match={match} players={players} key={match.id} />
+          ))}
+        </Stack>
       </Grid>
     </Grid>
   );
