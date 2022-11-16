@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import PropTypes from 'prop-types';
 import Player from '../Player';
+import MatchCard from './MatchCard';
 
 function numberWithSuffix(num) {
   const numAsNumber = parseInt(num, 10);
@@ -17,7 +18,7 @@ function numberWithSuffix(num) {
   return `${numAsNumber}th`;
 }
 
-function PlayerDetails({ player, entrantCount }) {
+function PlayerDetails({ player, entrantCount, players }) {
   return (
     <Grid container spacing={2}>
       <Grid xs={12}>{`${numberWithSuffix(
@@ -33,10 +34,7 @@ function PlayerDetails({ player, entrantCount }) {
       </Grid>
       <Grid container xs={12}>
         {player.matches.map((match) => (
-          <Grid xs={12} key={match.id}>
-            {match.fullRoundText}
-            {match.displayScore}
-          </Grid>
+          <MatchCard match={match} players={players} key={match.id} />
         ))}
       </Grid>
     </Grid>
