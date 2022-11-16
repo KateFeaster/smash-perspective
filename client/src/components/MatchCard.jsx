@@ -7,13 +7,21 @@ import Match from '../Match';
 import Player from '../Player';
 import PlayerCard from './PlayerCard';
 
+const DISPLAY_SCORE_COLORS = {
+  true: 'green',
+  false: 'red',
+  null: 'black',
+};
+
 function MatchCard({ match, players }) {
   return (
     <Paper sx={{ p: 1 }} variant="outlined">
       <Grid container>
         <Grid xs={5}>
           <Typography>{match.fullRoundText}</Typography>
-          <Typography>{match.displayScore}</Typography>
+          <Typography sx={{ color: DISPLAY_SCORE_COLORS[match.won] }}>
+            {match.displayScore}
+          </Typography>
         </Grid>
         <Grid
           xs={2}
