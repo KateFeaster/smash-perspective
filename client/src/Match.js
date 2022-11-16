@@ -6,6 +6,7 @@ class Match {
     this.opponentId = matchInfo.opponentId;
     this.displayScore = matchInfo.displayScore;
     this.id = matchInfo.id;
+    this.won = matchInfo.won;
   }
 }
 

@@ -26,6 +26,7 @@ module.exports = {
               },
             ],
             displayScore: '0 - 3',
+            winnerId: 10895582,
           },
           {
             id: 54170231,
@@ -49,6 +50,7 @@ module.exports = {
               },
             ],
             displayScore: '1 - 3',
+            winnerId: 11345520,
           },
           {
             id: 54170229,
@@ -72,6 +74,7 @@ module.exports = {
               },
             ],
             displayScore: '3 - 1',
+            winnerId: 10895575,
           },
           {
             id: 54150071,
@@ -95,6 +98,7 @@ module.exports = {
               },
             ],
             displayScore: '3 - 0',
+            winnerId: 10895575,
           },
           {
             id: 54150067,
@@ -118,6 +122,7 @@ module.exports = {
               },
             ],
             displayScore: '3 - 1',
+            winnerId: 10895575,
           },
           {
             id: 54150059,
@@ -141,6 +146,7 @@ module.exports = {
               },
             ],
             displayScore: '3 - 1',
+            winnerId: 10895575,
           },
           {
             id: 54150043,
@@ -164,6 +170,7 @@ module.exports = {
               },
             ],
             displayScore: '2 - 0',
+            winnerId: 10895575,
           },
           {
             id: 54095016,
@@ -187,6 +194,7 @@ module.exports = {
               },
             ],
             displayScore: '2 - 0',
+            winnerId: 10895575,
           },
           {
             id: 54095008,
@@ -210,6 +218,7 @@ module.exports = {
               },
             ],
             displayScore: '2 - 0',
+            winnerId: 10895575,
           },
           {
             id: 54094992,
@@ -233,6 +242,7 @@ module.exports = {
               },
             ],
             displayScore: '2 - 0',
+            winnerId: 10895575,
           },
         ],
       },

@@ -32,6 +32,9 @@ const matches = sampleMatches.data.entrant.paginatedSets.nodes.map(
       ).entrant.id,
       displayScore: node.displayScore,
       id: node.id,
+      won: node.winnerId
+        ? node.winnerId === sampleMatches.data.entrant.id
+        : null,
     })
 );
 
