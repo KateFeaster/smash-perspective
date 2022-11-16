@@ -7,7 +7,7 @@ import Player from '../Player';
 
 function PlayerList({ players, currentPlayer, setCurrentPlayer }) {
   return (
-    <List>
+    <List sx={{ padding: 0 }}>
       {players.map((player, index) => (
         <React.Fragment key={player.id}>
           <PlayerListEntry
@@ -15,7 +15,9 @@ function PlayerList({ players, currentPlayer, setCurrentPlayer }) {
             currentPlayer={currentPlayer}
             setCurrentPlayer={setCurrentPlayer}
           />
-          {index !== players.length - 1 && <Divider />}
+          {index !== players.length - 1 && (
+            <Divider sx={{ width: '80%', margin: '0 auto' }} />
+          )}
         </React.Fragment>
       ))}
     </List>

@@ -60,7 +60,7 @@ function App() {
           setCurrentPlayer={setCurrentPlayer}
         />
       </Grid>
-      <Grid xs={8} sx={{ backgroundColor: 'lightgrey' }}>
+      <Grid xs={9} sx={{ backgroundColor: 'lightgrey' }}>
         <PlayerDetails
           player={currentPlayer}
           entrantCount={600}
