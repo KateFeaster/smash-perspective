@@ -29,7 +29,7 @@ const matches = sampleMatches.data.entrant.paginatedSets.nodes.map(
       pool: node.phaseGroup.displayIdentifier,
       opponentId: node.slots.find(
         (slot) => slot.entrant.id !== sampleMatches.data.entrant.id
-      ),
+      ).entrant.id,
       displayScore: node.displayScore,
       id: node.id,
     })
@@ -44,7 +44,11 @@ function App() {
         <PlayerList players={players} />
       </Grid>
       <Grid xs={8}>
-        <PlayerDetails player={players[0]} entrantCount={600} />
+        <PlayerDetails
+          player={players[0]}
+          entrantCount={600}
+          players={players}
+        />
       </Grid>
     </Grid>
   );
