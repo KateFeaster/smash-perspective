@@ -52,11 +52,15 @@ function App() {
   );
 
   return (
-    <Grid container spacing={2}>
+    <Grid container>
       <Grid xs={3}>
-        <PlayerList players={players} />
+        <PlayerList
+          players={players}
+          currentPlayer={currentPlayer}
+          setCurrentPlayer={setCurrentPlayer}
+        />
       </Grid>
-      <Grid xs={8}>
+      <Grid xs={8} sx={{ backgroundColor: 'lightgrey' }}>
         <PlayerDetails
           player={currentPlayer}
           entrantCount={600}

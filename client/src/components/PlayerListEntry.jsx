@@ -6,9 +6,14 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import Player from '../Player';
 
-function PlayerListEntry({ player }) {
+function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
   return (
-    <ListItemButton>
+    <ListItemButton
+      onClick={() => setCurrentPlayer(player)}
+      sx={{
+        backgroundColor: player === currentPlayer ? 'lightgrey' : 'transparent',
+      }}
+    >
       <ListItemAvatar>
         <Avatar alt={`${player.gamerTag}'s Avatar`} src={player.profileImage} />{' '}
       </ListItemAvatar>
@@ -23,6 +28,7 @@ function PlayerListEntry({ player }) {
 
 PlayerListEntry.propTypes = {
   player: PropTypes.instanceOf(Player).isRequired,
+  setCurrentPlayer: PropTypes.func.isRequired,
 };
 
 export default PlayerListEntry;

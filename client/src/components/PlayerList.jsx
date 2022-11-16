@@ -5,12 +5,16 @@ import Divider from '@mui/material/Divider';
 import PlayerListEntry from './PlayerListEntry';
 import Player from '../Player';
 
-function PlayerList({ players }) {
+function PlayerList({ players, currentPlayer, setCurrentPlayer }) {
   return (
     <List>
       {players.map((player, index) => (
         <React.Fragment key={player.id}>
-          <PlayerListEntry player={player} />
+          <PlayerListEntry
+            player={player}
+            currentPlayer={currentPlayer}
+            setCurrentPlayer={setCurrentPlayer}
+          />
           {index !== players.length - 1 && <Divider />}
         </React.Fragment>
       ))}
@@ -20,6 +24,7 @@ function PlayerList({ players }) {
 
 PlayerList.propTypes = {
   players: PropTypes.arrayOf(PropTypes.instanceOf(Player)),
+  setCurrentPlayer: PropTypes.func.isRequired,
 };
 
 PlayerList.defaultProps = {
