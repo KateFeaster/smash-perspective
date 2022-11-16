@@ -6,6 +6,7 @@ const Axios = require('axios');
 require('dotenv').config();
 
 const app = express();
+const STARTGG_API_URL = 'https://api.start.gg/gql/alpha';
 
 app.use(express.json());
 app.use(morgan('combined'));
@@ -43,7 +44,51 @@ app.get('/players', (req, res) => {
     variables: { entrantsPage: req.query.page },
   };
 
-  Axios.post('https://api.start.gg/gql/alpha', query, {
+  Axios.post(STARTGG_API_URL, query, {
+    headers: { Authorization: `Bearer ${process.env.STARTGG_API_TOKEN}` },
+  })
+    .then((response) => {
+      res.status(200).json(response.data);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(400);
+    });
+});
+
+app.get('/matches', (req, res) => {
+  const query = {
+    query: `query EntrantSets($entrantId: ID!, $page: Int!){
+      entrant(id: $entrantId) {
+        id
+        paginatedSets(page: $page){
+          pageInfo {
+            totalPages
+          }
+          nodes {
+            id
+            fullRoundText
+            phaseGroup {
+              displayIdentifier
+              phase {
+                name
+              }
+            }
+            slots {
+              entrant{
+                id
+              }
+            }
+            displayScore(mainEntrantId:$entrantId)
+            winnerId
+          }
+        }
+      }
+    }`,
+    variables: { entrantId: req.query.entrant_id, page: req.query.page || 1 },
+  };
+
+  Axios.post(STARTGG_API_URL, query, {
     headers: { Authorization: `Bearer ${process.env.STARTGG_API_TOKEN}` },
   })
     .then((response) => {
