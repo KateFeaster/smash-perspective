@@ -1,19 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
 import Match from '../Match';
 import Player from '../Player';
 import PlayerCard from './PlayerCard';
 
 function MatchCard({ match, players }) {
   return (
-    <Grid xs={12} key={match.id}>
-      {players.find((player) => player.id === match.opponentId) && (
-        <PlayerCard player={players.find((p) => p.id === match.opponentId)} />
-      )}
-      {match.fullRoundText}
-      {match.displayScore}
-    </Grid>
+    <Paper>
+      <Grid container xs={7}>
+        <Grid xs={5}>
+          <Typography>{match.fullRoundText}</Typography>
+          <Typography>{match.displayScore}</Typography>
+        </Grid>
+        <Grid xs={2}>
+          <Typography>VS</Typography>
+        </Grid>
+        <Grid xs={5}>
+          {players.find((player) => player.id === match.opponentId) && (
+            <PlayerCard
+              player={players.find((p) => p.id === match.opponentId)}
+            />
+          )}
+        </Grid>
+      </Grid>
+    </Paper>
   );
 }
 
