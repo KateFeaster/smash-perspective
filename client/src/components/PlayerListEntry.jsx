@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
@@ -7,13 +8,8 @@ import Avatar from '@mui/material/Avatar';
 import Player from '../Player';
 
 function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
-  return (
-    <ListItemButton
-      onClick={() => setCurrentPlayer(player)}
-      sx={{
-        backgroundColor: player === currentPlayer ? 'lightgrey' : 'transparent',
-      }}
-    >
+  const inner = (
+    <>
       <ListItemAvatar>
         <Avatar alt={`${player.gamerTag}'s Avatar`} src={player.profileImage} />{' '}
       </ListItemAvatar>
@@ -22,6 +18,16 @@ function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
           player.gamerTag
         }`}
       />
+    </>
+  );
+
+  if (player === currentPlayer) {
+    return <ListItem sx={{ backgroundColor: 'lightgrey' }}>{inner}</ListItem>;
+  }
+
+  return (
+    <ListItemButton onClick={() => setCurrentPlayer(player)}>
+      {inner}
     </ListItemButton>
   );
 }
