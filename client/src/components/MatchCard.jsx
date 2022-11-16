@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import Match from '../Match';
 import Player from '../Player';
 import PlayerCard from './PlayerCard';
@@ -23,15 +24,17 @@ function MatchCard({ match, players }) {
             {match.displayScore}
           </Typography>
         </Grid>
-        <Grid
-          xs={2}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography>VS</Typography>
+        <Grid xs={2}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              height: '100%',
+            }}
+          >
+            <Typography>VS</Typography>
+          </Box>
         </Grid>
         <Grid xs={5}>
           {players.find((player) => player.id === match.opponentId) && (
