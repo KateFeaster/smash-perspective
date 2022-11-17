@@ -66,13 +66,35 @@ function PlayerDetails({ player, entrantCount, players, setPlayerMatches }) {
 
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          margin: '15px',
+          backgroundColor: 'white',
+          '--Grid-borderWidth': '2px',
+          borderTop: 'var(--Grid-borderWidth) solid',
+          borderLeft: 'var(--Grid-borderWidth) solid',
+          borderColor: 'divider',
+          '& > div': {
+            borderRight: 'var(--Grid-borderWidth) solid',
+            borderBottom: 'var(--Grid-borderWidth) solid',
+            borderColor: 'divider',
+          },
+        }}
+      >
         <Grid xs={12} display="flex" justifyContent="center">
-          <Typography>
-            {`${numberWithSuffix(
-              player.placement
-            )} Place out of ${entrantCount}`}
-          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            <Typography variant="h4">
+              {`${numberWithSuffix(player.placement)} Place`}
+            </Typography>
+            <Typography align="center">{`out of ${entrantCount}`}</Typography>
+          </Box>
         </Grid>
         <Grid xs={4}>
           <Box
