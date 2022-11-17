@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -24,19 +24,10 @@ function MatchCard({ match, players }) {
             {match.displayScore}
           </Typography>
         </Grid>
-        <Grid xs={2}>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              height: '100%',
-            }}
-          >
-            <Typography>VS</Typography>
-          </Box>
+        <Grid xs={2} display="flex" alignItems="center" justifyContent="center">
+          <Typography>VS</Typography>
         </Grid>
-        <Grid xs={5}>
+        <Grid xs={5} display="flex" gap={1}>
           {players.find((player) => player.id === match.opponentId) && (
             <PlayerCard
               player={players.find((p) => p.id === match.opponentId)}
