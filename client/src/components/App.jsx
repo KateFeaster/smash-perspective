@@ -23,10 +23,16 @@ function App() {
     setPlayers(newPlayers);
   };
 
+  const getPinnedPlayers = () => {
+    Axios.get('/pinned-players').then((result) => {
+      setPinnedPlayers(result.data);
+    });
+  };
+
   const addPinnedPlayer = (newPlayer) => {
-    if (!pinnedPlayers.find((player) => player === newPlayer)) {
-      setPinnedPlayers([...pinnedPlayers, newPlayer]);
-    }
+    Axios.post('/pinned-players', { entrant_id: newPlayer.id }).then(
+      getPinnedPlayers
+    );
   };
 
   const deletePinnedPlayer = (targetPlayer) => {
@@ -39,6 +45,8 @@ function App() {
       }, [])
     );
   };
+
+  useEffect(getPinnedPlayers, []);
 
   useEffect(
     () => {
