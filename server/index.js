@@ -110,6 +110,10 @@ app.get('/matches', (req, res) => {
     });
 });
 
+app.get('/pinned-players', (req, res) => {});
+app.post('/pinned-players', (req, res) => {});
+app.delete('/pinned-players', (req, res) => {});
+
 app.listen(3000, () => {
   console.log('Server listening on port: 3000');
 });
