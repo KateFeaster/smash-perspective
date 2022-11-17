@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
 import PlayerList from './PlayerList';
 import PlayerDetails from './PlayerDetails';
 import Player from '../Player';
+import SmashLogo from '../../assets/img/SmashLogo.svg';
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -53,6 +56,19 @@ function App() {
 
   return (
     <Grid container>
+      <Grid
+        xs={12}
+        display="flex"
+        gap={1}
+        sx={{ backgroundColor: '#d32525', padding: '10px' }}
+      >
+        <Avatar alt="Super Smash Bros Logo" src={SmashLogo} />
+        <Typography
+          sx={{ color: 'white', fontSize: '2em', fontWeight: 'bold' }}
+        >
+          Smash Perspective
+        </Typography>
+      </Grid>
       <Grid xs={3}>
         <PlayerList
           players={players}
@@ -60,7 +76,7 @@ function App() {
           setCurrentPlayer={setCurrentPlayer}
         />
       </Grid>
-      <Grid xs={9} sx={{ backgroundColor: 'lightgrey' }}>
+      <Grid xs={9} sx={{ backgroundColor: '#bbbbbb' }}>
         <PlayerDetails
           player={currentPlayer}
           entrantCount={600}

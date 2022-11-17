@@ -22,7 +22,7 @@ function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
   );
 
   if (player === currentPlayer) {
-    return <ListItem sx={{ backgroundColor: 'lightgrey' }}>{inner}</ListItem>;
+    return <ListItem sx={{ backgroundColor: '#bbbbbb' }}>{inner}</ListItem>;
   }
 
   return (
