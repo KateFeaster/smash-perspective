@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const Axios = require('axios');
+const session = require('express-session');
 
 require('dotenv').config();
 
@@ -11,6 +12,7 @@ const STARTGG_API_URL = 'https://api.start.gg/gql/alpha';
 app.use(express.json());
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(session({ secret: process.env.SESSION_SECRET }));
 
 app.get('/players', (req, res) => {
   const query = {
