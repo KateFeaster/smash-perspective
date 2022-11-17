@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -16,14 +16,6 @@ function PlayerList({
   addPinnedPlayer,
 }) {
   const [inputValue, setInputValue] = useState('');
-  const [isSelected, setIsSelected] = useState(false);
-
-  useEffect(() => {
-    if (isSelected) {
-      setIsSelected(false);
-      setInputValue('');
-    }
-  }, [isSelected]);
 
   return (
     <List sx={{ padding: 0 }}>
@@ -46,16 +38,20 @@ function PlayerList({
             <TextField {...params} label="Add a Player" />
           )}
           autoHighlight
-          clearOnEscape
           openOnFocus
           onChange={(e, newValue) => {
             if (newValue) {
               addPinnedPlayer(newValue);
             }
           }}
-          onClose={() => setIsSelected(true)}
           inputValue={inputValue}
-          onInputChange={(e, newValue) => setInputValue(newValue)}
+          onInputChange={(e, newValue, reason) => {
+            if (reason === 'reset') {
+              setInputValue('');
+            } else {
+              setInputValue(newValue);
+            }
+          }}
           fullWidth
           loading={players.length === 0}
         />
