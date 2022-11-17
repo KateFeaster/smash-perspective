@@ -68,6 +68,7 @@ PlayerList.propTypes = {
   setCurrentPlayer: PropTypes.func.isRequired,
   pinnedPlayers: PropTypes.arrayOf(PropTypes.instanceOf(Player)),
   addPinnedPlayer: PropTypes.func.isRequired,
+  deletePinnedPlayer: PropTypes.func.isRequired,
 };
 
 PlayerList.defaultProps = {

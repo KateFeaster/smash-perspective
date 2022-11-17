@@ -51,6 +51,7 @@ PlayerListEntry.propTypes = {
   player: PropTypes.instanceOf(Player).isRequired,
   currentPlayer: PropTypes.instanceOf(Player).isRequired,
   setCurrentPlayer: PropTypes.func.isRequired,
+  deletePinnedPlayer: PropTypes.func.isRequired,
 };
 
 export default PlayerListEntry;
