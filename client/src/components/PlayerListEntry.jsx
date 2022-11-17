@@ -5,9 +5,16 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 import Player from '../Player';
 
-function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
+function PlayerListEntry({
+  player,
+  currentPlayer,
+  setCurrentPlayer,
+  deletePinnedPlayer,
+}) {
   const inner = (
     <>
       <ListItemAvatar>
@@ -26,9 +33,17 @@ function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
   }
 
   return (
-    <ListItemButton onClick={() => setCurrentPlayer(player)}>
-      {inner}
-    </ListItemButton>
+    <ListItem
+      secondaryAction={
+        <IconButton edge="end" onClick={() => deletePinnedPlayer(player)}>
+          <DeleteIcon />
+        </IconButton>
+      }
+    >
+      <ListItemButton onClick={() => setCurrentPlayer(player)}>
+        {inner}
+      </ListItemButton>
+    </ListItem>
   );
 }
 

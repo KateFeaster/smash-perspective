@@ -29,6 +29,17 @@ function App() {
     }
   };
 
+  const deletePinnedPlayer = (targetPlayer) => {
+    setPinnedPlayers(
+      pinnedPlayers.reduce((prev, curr) => {
+        if (curr !== targetPlayer) {
+          return [...prev, curr];
+        }
+        return [...prev];
+      }, [])
+    );
+  };
+
   useEffect(
     () => {
       if (totalPages === -1 || page <= totalPages) {
@@ -80,6 +91,7 @@ function App() {
           setCurrentPlayer={setCurrentPlayer}
           pinnedPlayers={pinnedPlayers}
           addPinnedPlayer={addPinnedPlayer}
+          deletePinnedPlayer={deletePinnedPlayer}
         />
       </Grid>
       <Grid xs={9} sx={{ backgroundColor: '#bbbbbb' }}>

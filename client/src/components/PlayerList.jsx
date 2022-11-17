@@ -14,6 +14,7 @@ function PlayerList({
   setCurrentPlayer,
   pinnedPlayers,
   addPinnedPlayer,
+  deletePinnedPlayer,
 }) {
   const [inputValue, setInputValue] = useState('');
 
@@ -25,6 +26,7 @@ function PlayerList({
             player={player}
             currentPlayer={currentPlayer}
             setCurrentPlayer={setCurrentPlayer}
+            deletePinnedPlayer={deletePinnedPlayer}
           />
           <Divider sx={{ width: '80%', margin: '0 auto' }} />
         </React.Fragment>
