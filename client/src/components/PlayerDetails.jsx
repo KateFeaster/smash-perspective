@@ -23,7 +23,7 @@ function numberWithSuffix(num) {
   return `${numAsNumber}th`;
 }
 
-function PlayerDetails({ player, entrantCount, players, setPlayerMatches }) {
+function PlayerDetails({ player, entrantCount, setPlayerMatches }) {
   useEffect(() => {
     if (player.id) {
       Axios.get(`/matches?entrant_id=${player.id}`).then((response) => {
@@ -142,7 +142,7 @@ function PlayerDetails({ player, entrantCount, players, setPlayerMatches }) {
       </Grid>
       <Stack spacing={2} sx={{ width: '50%', margin: '0 auto' }}>
         {player.matches.map((match) => (
-          <MatchCard match={match} players={players} key={match.id} />
+          <MatchCard match={match} key={match.id} />
         ))}
       </Stack>
     </>

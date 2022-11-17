@@ -80,7 +80,6 @@ function App() {
         <PlayerDetails
           player={currentPlayer}
           entrantCount={600}
-          players={players}
           setPlayerMatches={setPlayerMatches}
         />
       </Grid>
