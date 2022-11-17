@@ -3,7 +3,7 @@ class Match {
     this.fullRoundText = matchInfo.fullRoundText;
     this.phase = matchInfo.phase;
     this.pool = matchInfo.pool;
-    this.opponentId = matchInfo.opponentId;
+    this.opponent = matchInfo.opponent;
     this.displayScore = matchInfo.displayScore;
     this.id = matchInfo.id;
     this.won = matchInfo.won;

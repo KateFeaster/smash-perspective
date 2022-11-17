@@ -58,10 +58,10 @@ app.get('/players', (req, res) => {
 
 app.get('/matches', (req, res) => {
   const query = {
-    query: `query EntrantSets($entrantId: ID!, $page: Int!){
+    query: `query EntrantSets($entrantId: ID!){
       entrant(id: $entrantId) {
         id
-        paginatedSets(page: $page){
+        paginatedSets{
           pageInfo {
             totalPages
           }
@@ -77,13 +77,21 @@ app.get('/matches', (req, res) => {
             slots {
               entrant{
                 id
+                participants {
+                  gamerTag
+                  user {
+                    images(type: "profile") {
+                      url
+                    }
+                  }
+                }
               }
             }
             displayScore(mainEntrantId:$entrantId)
             winnerId
           }
         }
-      }
+        }
     }`,
     variables: { entrantId: req.query.entrant_id, page: req.query.page || 1 },
   };

@@ -33,14 +33,29 @@ function PlayerDetails({ player, entrantCount, players, setPlayerMatches }) {
               fullRoundText: node.fullRoundText,
               phase: node.phaseGroup.phase.name,
               pool: node.phaseGroup.displayIdentifier,
-              opponentId: node.slots.find(
-                (slot) => slot.entrant.id !== response.data.data.entrant.id
-              ).entrant.id,
               displayScore: node.displayScore,
               id: node.id,
               won: node.winnerId
                 ? node.winnerId === response.data.data.entrant.id
                 : null,
+              opponent: new Player({
+                id: node.slots.find(
+                  (slot) => slot.entrant.id !== response.data.data.entrant.id
+                ).entrant.id,
+                gamerTag: node.slots.find(
+                  (slot) => slot.entrant.id !== response.data.data.entrant.id
+                ).entrant.participants[0].gamerTag,
+                prefix: node.slots.find(
+                  (slot) => slot.entrant.id !== response.data.data.entrant.id
+                ).entrant.participants[0].prefix,
+                profileImage:
+                  node.slots.find(
+                    (slot) => slot.entrant.id !== response.data.data.entrant.id
+                  ).entrant.participants[0].user.images[0] &&
+                  node.slots.find(
+                    (slot) => slot.entrant.id !== response.data.data.entrant.id
+                  ).entrant.participants[0].user.images[0].url,
+              }),
             })
         );
 

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Match from '../Match';
-import Player from '../Player';
 import PlayerCard from './PlayerCard';
 
 const DISPLAY_SCORE_COLORS = {
@@ -14,7 +12,7 @@ const DISPLAY_SCORE_COLORS = {
   null: 'black',
 };
 
-function MatchCard({ match, players }) {
+function MatchCard({ match }) {
   return (
     <Paper sx={{ p: 1 }} variant="outlined">
       <Grid container>
@@ -28,11 +26,7 @@ function MatchCard({ match, players }) {
           <Typography>VS</Typography>
         </Grid>
         <Grid xs={5} display="flex" gap={1}>
-          {players.find((player) => player.id === match.opponentId) && (
-            <PlayerCard
-              player={players.find((p) => p.id === match.opponentId)}
-            />
-          )}
+          <PlayerCard player={match.opponent} />
         </Grid>
       </Grid>
     </Paper>
@@ -41,11 +35,8 @@ function MatchCard({ match, players }) {
 
 MatchCard.propTypes = {
   match: PropTypes.instanceOf(Match).isRequired,
-  players: PropTypes.arrayOf(PropTypes.instanceOf(Player)),
 };
 
-MatchCard.defaultProps = {
-  players: [],
-};
+MatchCard.defaultProps = {};
 
 export default MatchCard;
