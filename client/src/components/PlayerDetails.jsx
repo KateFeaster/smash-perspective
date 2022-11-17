@@ -152,13 +152,11 @@ function PlayerDetails({ player, entrantCount, setPlayerMatches }) {
 PlayerDetails.propTypes = {
   player: PropTypes.instanceOf(Player).isRequired,
   entrantCount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  players: PropTypes.arrayOf(PropTypes.instanceOf(Player)),
   setPlayerMatches: PropTypes.func.isRequired,
 };
 
 PlayerDetails.defaultProps = {
   entrantCount: 0,
-  players: [],
 };
 
 export default PlayerDetails;
