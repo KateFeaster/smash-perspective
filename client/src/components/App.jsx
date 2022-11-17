@@ -36,13 +36,8 @@ function App() {
   };
 
   const deletePinnedPlayer = (targetPlayer) => {
-    setPinnedPlayers(
-      pinnedPlayers.reduce((prev, curr) => {
-        if (curr !== targetPlayer) {
-          return [...prev, curr];
-        }
-        return [...prev];
-      }, [])
+    Axios.delete(`/pinned-players?entrant_id=${targetPlayer.id}`).then(
+      getPinnedPlayers
     );
   };
 
