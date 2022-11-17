@@ -10,6 +10,7 @@ import SmashLogo from '../../assets/img/SmashLogo.svg';
 
 function App() {
   const [players, setPlayers] = useState([]);
+  const [pinnedPlayers, setPinnedPlayers] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(-1);
   const [currentPlayer, setCurrentPlayer] = useState(
@@ -20,6 +21,12 @@ function App() {
     const newPlayers = [...players];
     newPlayers.find((player) => player.id === id).matches = matches;
     setPlayers(newPlayers);
+  };
+
+  const addPinnedPlayer = (newPlayer) => {
+    if (!pinnedPlayers.find((player) => player === newPlayer)) {
+      setPinnedPlayers([...pinnedPlayers, newPlayer]);
+    }
   };
 
   useEffect(
@@ -43,9 +50,6 @@ function App() {
           setPage(page + 1);
           setTotalPages(response.data.data.event.entrants.pageInfo.totalPages);
           setPlayers([...players, ...newPlayers]);
-          if (currentPlayer.id === undefined) {
-            setCurrentPlayer(newPlayers[0]);
-          }
         });
       }
     },
@@ -74,6 +78,8 @@ function App() {
           players={players}
           currentPlayer={currentPlayer}
           setCurrentPlayer={setCurrentPlayer}
+          pinnedPlayers={pinnedPlayers}
+          addPinnedPlayer={addPinnedPlayer}
         />
       </Grid>
       <Grid xs={9} sx={{ backgroundColor: '#bbbbbb' }}>
