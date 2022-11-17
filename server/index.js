@@ -142,7 +142,19 @@ app.post('/pinned-players', (req, res) => {
       res.sendStatus(400);
     });
 });
-app.delete('/pinned-players', (req, res) => {});
+app.delete('/pinned-players', (req, res) => {
+  Session.destroy({
+    where: {
+      sessionId: req.session.id,
+      entrantId: req.query.entrant_id,
+    },
+  })
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(400);
+    });
+});
 
 app.listen(3000, () => {
   console.log('Server listening on port: 3000');
