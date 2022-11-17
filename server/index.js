@@ -83,6 +83,7 @@ app.get('/matches', (req, res) => {
                 id
                 participants {
                   gamerTag
+                  prefix
                   user {
                     images(type: "profile") {
                       url
