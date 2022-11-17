@@ -18,9 +18,17 @@ function PlayerList({
 }) {
   const [inputValue, setInputValue] = useState('');
 
+  const loadedPlayers = pinnedPlayers.reduce((prev, current) => {
+    const player = players.find((p) => p.id === current);
+    if (player) {
+      return [...prev, player];
+    }
+    return prev;
+  }, []);
+
   return (
     <List sx={{ padding: 0 }}>
-      {pinnedPlayers.map((player) => (
+      {loadedPlayers.map((player) => (
         <React.Fragment key={player.id}>
           <PlayerListEntry
             player={player}
