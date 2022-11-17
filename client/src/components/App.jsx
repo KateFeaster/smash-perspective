@@ -43,34 +43,29 @@ function App() {
 
   useEffect(getPinnedPlayers, []);
 
-  useEffect(
-    () => {
-      if (totalPages === -1 || page <= totalPages) {
-        Axios.get(`/players?page=${page}`).then((response) => {
-          const newPlayers = response.data.data.event.entrants.nodes.map(
-            (node) =>
-              new Player({
-                id: node.id,
-                gamerTag: node.participants[0].user.player.gamerTag,
-                prefix: node.participants[0].user.player.prefix,
-                profileImage:
-                  node.participants[0].user.images[0] &&
-                  node.participants[0].user.images[0].url,
-                seed: node.initialSeedNum,
-                placement: node.standing.placement,
-              })
-          );
+  useEffect(() => {
+    if (totalPages === -1 || page <= totalPages) {
+      Axios.get(`/players?page=${page}`).then((response) => {
+        const newPlayers = response.data.data.event.entrants.nodes.map(
+          (node) =>
+            new Player({
+              id: node.id,
+              gamerTag: node.participants[0].user.player.gamerTag,
+              prefix: node.participants[0].user.player.prefix,
+              profileImage:
+                node.participants[0].user.images[0] &&
+                node.participants[0].user.images[0].url,
+              seed: node.initialSeedNum,
+              placement: node.standing.placement,
+            })
+        );
 
-          setPage(page + 1);
-          setTotalPages(response.data.data.event.entrants.pageInfo.totalPages);
-          setPlayers([...players, ...newPlayers]);
-        });
-      }
-    },
-    [
-      /* page */
-    ]
-  );
+        setPage(page + 1);
+        setTotalPages(response.data.data.event.entrants.pageInfo.totalPages);
+        setPlayers([...players, ...newPlayers]);
+      });
+    }
+  }, [page]);
 
   return (
     <Grid container>
