@@ -3,6 +3,8 @@ const path = require('path');
 const morgan = require('morgan');
 const Axios = require('axios');
 const session = require('express-session');
+const Sequelize = require('sequelize');
+const { Session } = require('./models');
 
 require('dotenv').config();
 
@@ -110,8 +112,36 @@ app.get('/matches', (req, res) => {
     });
 });
 
-app.get('/pinned-players', (req, res) => {});
-app.post('/pinned-players', (req, res) => {});
+app.get('/pinned-players', (req, res) => {
+  Session.findOne({
+    where: { sessionId: req.session.id },
+    attributes: [
+      [Sequelize.fn('array_agg', Sequelize.col('entrantId')), 'entrantIds'],
+    ],
+    group: ['sessionId'],
+  })
+    .then((result) => {
+      if (result) {
+        res.status(200).json(result.dataValues.entrantIds);
+      } else {
+        res.status(200).json([]);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(400);
+    });
+});
+app.post('/pinned-players', (req, res) => {
+  Session.findOrCreate({
+    where: { sessionId: req.session.id, entrantId: req.body.entrant_id },
+  })
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(400);
+    });
+});
 app.delete('/pinned-players', (req, res) => {});
 
 app.listen(3000, () => {
