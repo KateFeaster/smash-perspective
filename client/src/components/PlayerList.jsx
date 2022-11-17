@@ -26,11 +26,13 @@ function PlayerList({ players, currentPlayer, setCurrentPlayer }) {
 
 PlayerList.propTypes = {
   players: PropTypes.arrayOf(PropTypes.instanceOf(Player)),
+  currentPlayer: PropTypes.instanceOf(Player),
   setCurrentPlayer: PropTypes.func.isRequired,
 };
 
 PlayerList.defaultProps = {
   players: [],
+  currentPlayer: new Player({}),
 };
 
 export default PlayerList;

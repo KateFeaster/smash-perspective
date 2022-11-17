@@ -34,6 +34,7 @@ function PlayerListEntry({ player, currentPlayer, setCurrentPlayer }) {
 
 PlayerListEntry.propTypes = {
   player: PropTypes.instanceOf(Player).isRequired,
+  currentPlayer: PropTypes.instanceOf(Player).isRequired,
   setCurrentPlayer: PropTypes.func.isRequired,
 };
 
